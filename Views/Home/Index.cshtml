@@ -5,6 +5,13 @@
     <p class="fs-4">
         We have the best prices and selection of high quality foods &amp; beverages on the planet! Check out our featured discounts below.
     </p>
+    <div class="bg-primary m-1 p-1 text-white"><h4>Category Listing</h4></div>
+<ul>
+    @foreach (Category category in Model)
+    {
+        <li>@category.CategoryName - @category.Description</li>
+    }
+</ul>
     <hr class="my-4">
     <p class="fs-5">For exceptional international quisuine, look no further.</p>
     <a class="btn btn-outline-primary btn-lg" href="#" role="button"><i class="bi bi-cart"></i> Order Now</a>

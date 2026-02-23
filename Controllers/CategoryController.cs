@@ -2,12 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Northwind.Controllers
 {
-    public class HomeController(DataContext db) : Controller
+    public class CategoryController(DataContext db) : Controller
     {
         // this controller depends on the DataContext
 
 
         private readonly DataContext _dataContext = db;
-        public IActionResult Index() => View(_dataContext.Categories);
+        public IActionResult Category() => View(_dataContext.Categories);
     }
 }
