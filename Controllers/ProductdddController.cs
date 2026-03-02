@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Northwind.Controllers
 {
-    public class CategoryController(DataContext db) : Controller
+    public class ProducController(DataContext db) : Controller
     {
         // this controller depends on the DataContext
 

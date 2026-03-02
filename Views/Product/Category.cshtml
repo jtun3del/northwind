@@ -1,8 +1,10 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <div class="bg-primary m-1 p-1 text-white"><h4>Category Listing</h4></div>
 <ul>
     @foreach (Category category in Model)
     {
-        <li>@category.CategoryName - @category.Description</li>
+        
+        <li><a asp-controller="Product" asp-action="dex" asp-route-id="@category.CategoryId">@category.CategoryName </a> - @category.Description</li>
     }
 </ul>
 ddddd
