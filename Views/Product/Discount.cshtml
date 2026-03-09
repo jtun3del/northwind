@@ -1,0 +1,29 @@
+@model IEnumerable<Discount>
+
+discount.html
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col" class="text-end">Price</th>
+      <th scope="col" class="text-end">Stock</th>
+    </tr>
+</thead>
+<div class="p-2 m-2 row row-cols-1 row-cols-lg-3 featured">
+    <ul class="list-group">
+  
+    @foreach (Discount d in Model)
+    {
+        <li class="list-group-item">
+        <div class="col discounts px-2 py-4">
+            <h4>@d.Title</h4>
+            <div class="mb-4">
+                @d.Description
+            </div>
+            <i>Discount expires: @d.EndTime.ToString("MM/dd/yyyy")</i><br />
+            <a href="#"><i class="far fa-hand-point-right"></i> Discount Code</a>
+        </div>
+        </li>
+    }
+    </ul>
+</div>
